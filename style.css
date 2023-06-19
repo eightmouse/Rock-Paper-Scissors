@@ -1,0 +1,116 @@
+/*Removing margin and padding globally*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Giving the main section height, fonts and background color*/
+section {
+    height: 100vh;
+    background-image: url("./assets/leaf-village.jpg");
+    /*
+    background-color: rgb(39, 41, 68);
+    */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background-image {
+    background-image: url("./assets/leaf-village.jpg");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+/*Flexing the score to appear properly and changing the color*/
+.score {
+    color: rgb(224, 224, 224);
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Changing the h2 font size*/
+.score h2 {
+    font-size: 30px;
+}
+
+/*Changing the p positioning and font size, for better visibility*/
+.score p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+/*Flexing the content in column and adding the same "white color"*/
+.intro {
+    color: rgb(224, 224, 224);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+}
+
+/*Resizing the h1*/
+.intro h1 {
+    font-size: 50px;
+}
+
+/*Button styling is here*/
+.intro button,
+.match button {
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+    background-color: rgb(45, 117, 96);
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+/*Properties of the match area*/
+.match {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5;
+
+}
+
+/**/
+.winner {
+    color: rgb(224, 224, 224);
+    text-align: center;
+    font-size: 50px;
+}
+
+/*Flexing the content to be centered*/
+.hands, 
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Player side properties*/
+.player-hand{
+    transform: rotateY(180deg);
+}
+
+/*Fade out effect*/
+div.fadeOut {
+opacity: 0;
+pointer-events: none;
+}
+
+/*Fade in effect*/
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
